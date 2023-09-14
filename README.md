@@ -1,3 +1,3 @@
 # OpenLibrarySwift
 
-A description of this package.
+Open Library API wrapper written for Swift
