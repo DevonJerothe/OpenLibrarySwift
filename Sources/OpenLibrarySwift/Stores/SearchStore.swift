@@ -15,6 +15,12 @@ public struct SearchStore: SearchService {
     public var urlSession: URLSession
     public var baseURL: String = "https://openlibrary.org/search"
 
+    public init(
+        urlSession: URLSession = URLSession(configuration: .default)
+    ) {
+        self.urlSession = urlSession
+    }
+
     public func searchWorks(_ query: String, params: [SearchParams:String]) async -> Result<QueryResponse, APIError> {
         await makeRequest(endpoint: ".json", response: QueryResponse.self, params: params)
     }

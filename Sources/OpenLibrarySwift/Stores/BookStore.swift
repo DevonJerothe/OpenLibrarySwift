@@ -15,6 +15,12 @@ public struct BookStore: BookServices {
     public var urlSession: URLSession
     public var baseURL: String = "https://openlibrary.org/books"
 
+    public init(
+        urlSession: URLSession = URLSession(configuration: .default)
+    ) {
+        self.urlSession = urlSession
+    }
+
     public func fetchBook(_ bookID: String) async -> Result<Edition, APIError> {
         await makeRequest(endpoint: "/\(bookID).json", response: Edition.self)
     }

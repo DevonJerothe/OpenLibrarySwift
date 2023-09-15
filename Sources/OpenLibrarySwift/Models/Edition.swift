@@ -8,34 +8,34 @@
 import Foundation
 
 public class Edition: Codable {
-    var type: TypeClass?
-    var authors: [TypeClass]?
-    var isbn13: [String]?
-    var languages: [TypeClass]?
-    var pagination, publishDate: String?
-    var publishers, sourceRecords, subjects: [String]?
-    var title, weight, fullTitle: String?
-    var works: [TypeClass]?
-    var key: String?
-    var covers: [Int]?
-    var numberOfPages, latestRevision, revision: Int?
-    var localID: [String]?
-    var physicalFormat: String?
-    var isbn10: [String]?
-    var ocaid: String?
-    var subtitle: String?
-    var lcClassifications, oclcNumbers: [String]?
-    var physicalDimensions, publishCountry: String?
-    var workTitles, contributions: [String]?
-    var byStatement: String?
-    var publishPlaces, otherTitles, series: [String]?
-    var genres: [String]?
-    var editionName: String?
-    var description: EditionDescription? 
-    var deweyDecimalClass, iaBoxID: [String]?
+    public var type: TypeClass?
+    public var authors: [TypeClass]?
+    public var isbn13: [String]?
+    public var languages: [TypeClass]?
+    public var pagination, publishDate: String?
+    public var publishers, sourceRecords, subjects: [String]?
+    public var title, weight, fullTitle: String?
+    public var works: [TypeClass]?
+    public var key: String?
+    public var covers: [Int]?
+    public var numberOfPages, latestRevision, revision: Int?
+    public var localID: [String]?
+    public var physicalFormat: String?
+    public var isbn10: [String]?
+    public var ocaid: String?
+    public var subtitle: String?
+    public var lcClassifications, oclcNumbers: [String]?
+    public var physicalDimensions, publishCountry: String?
+    public var workTitles, contributions: [String]?
+    public var byStatement: String?
+    public var publishPlaces, otherTitles, series: [String]?
+    public var genres: [String]?
+    public var editionName: String?
+    public var description: EditionDescription?
+    public var deweyDecimalClass, iaBoxID: [String]?
 }
 
 public class EditionDescription: Codable {
-    var type: String?
-    var value: String?
+    public var type: String?
+    public var value: String?
 }
