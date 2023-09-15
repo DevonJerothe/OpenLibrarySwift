@@ -8,24 +8,24 @@
 import Foundation
 
 public class Works: Codable {
-    var firstPublishDate, title, key: String?
-    var authors: [AuthorKey]?
-    var type: TypeClass?
-    var description: String?
-    var covers: [Int]?
-    var subjectPlaces, subjects, subjectPeople, subjectTimes: [String]?
-    var location: String?
-    var latestRevision, revision: Int?
+    public var firstPublishDate, title, key: String?
+    public var authors: [AuthorKey]?
+    public var type: TypeClass?
+    public var description: String?
+    public var covers: [Int]?
+    public var subjectPlaces, subjects, subjectPeople, subjectTimes: [String]?
+    public var location: String?
+    public var latestRevision, revision: Int?
 }
 
 public class AuthorKey: Codable {
-    var author: TypeClass?
-    var key: TypeClass?
+    public var author: TypeClass?
+    public var key: TypeClass?
 }
 
 public class WorkRating: Codable {
-    var summary: RatingSummary?
-    var counts: [String:Int]?
+    public var summary: RatingSummary?
+    public var counts: [String:Int]?
 
     init(
         summary: RatingSummary?,
@@ -37,9 +37,9 @@ public class WorkRating: Codable {
 }
 
 public class RatingSummary: Codable {
-    var average: Double?
-    var count: Int?
-    var sortable: Double?
+    public var average: Double?
+    public var count: Int?
+    public var sortable: Double?
 
     init(
         average: Double?,

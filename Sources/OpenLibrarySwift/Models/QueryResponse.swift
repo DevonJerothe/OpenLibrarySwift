@@ -8,11 +8,11 @@
 import Foundation
 
 public class QueryResponse: Codable {
-    var numFound, start, offset: Int?
-    var numFoundExact: Bool?
-    var docs: [Doc]?
-    var worksNumFound: Int?
-    var q: String?
+    public var numFound, start, offset: Int?
+    public var numFoundExact: Bool?
+    public var docs: [Doc]?
+    public var worksNumFound: Int?
+    public var q: String?
 
     enum CodingKeys: String, CodingKey {
         case numFound
@@ -43,10 +43,10 @@ public class QueryResponse: Codable {
     }
 }
 
-class Doc: Codable {
-    var key, title: String?
-    var coverI: Int?
-    var authorName: [String]?
+public class Doc: Codable {
+    public var key, title: String?
+    public var coverI: Int?
+    public var authorName: [String]?
 
     enum CodingKeys: String, CodingKey {
         case key, title

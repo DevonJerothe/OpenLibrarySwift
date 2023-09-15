@@ -8,15 +8,15 @@
 import Foundation
 
 public class PaginatedList<T: Codable>: Codable {
-    var links: Links?
-    var size: Int?
-    var entries: [T]?
+    public var links: Links?
+    public var size: Int?
+    public var entries: [T]?
 }
 
 public class Links: Codable {
-    var work: String?
-    var prev: String?
-    var next: String?
+    public var work: String?
+    public var prev: String?
+    public var next: String?
 }
 
 extension PaginatedList: APIRequest {

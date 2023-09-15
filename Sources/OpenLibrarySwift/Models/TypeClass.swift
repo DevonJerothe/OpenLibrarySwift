@@ -8,5 +8,5 @@
 import Foundation
 
 public class TypeClass: Codable {
-    var key: String?
+    public var key: String?
 }

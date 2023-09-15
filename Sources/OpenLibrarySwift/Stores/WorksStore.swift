@@ -18,6 +18,12 @@ public struct WorksStore: WorksService {
     public var urlSession: URLSession
     public var baseURL: String = "https://openlibrary.org/"
 
+    public init(
+        urlSession: URLSession = URLSession(configuration: .default)
+    ) {
+        self.urlSession = urlSession
+    }
+
     // Fetch Work
     public func fetchWork(_ workID: String) async -> Result<Works, APIError> {
         await makeRequest(endpoint: "works/\(workID).json", response: Works.self)
