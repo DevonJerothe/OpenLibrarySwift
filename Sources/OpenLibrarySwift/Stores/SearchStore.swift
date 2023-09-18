@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol SearchService: APIRequest {
-    func searchWorks(_ query: String, params: [SearchParams:String]) async -> Result<QueryResponse, APIError>
+    func searchWorks(params: [SearchParams:String]) async -> Result<QueryResponse, APIError>
 }
 
 public struct SearchStore: SearchService {
@@ -21,7 +21,7 @@ public struct SearchStore: SearchService {
         self.urlSession = urlSession
     }
 
-    public func searchWorks(_ query: String, params: [SearchParams:String]) async -> Result<QueryResponse, APIError> {
+    public func searchWorks(params: [SearchParams:String]) async -> Result<QueryResponse, APIError> {
         await makeRequest(endpoint: ".json", response: QueryResponse.self, params: params)
     }
 }
